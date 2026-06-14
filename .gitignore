@@ -1,0 +1,26 @@
+
+# Local environment files
+.env
+.env.*
+backend/.env
+backend/.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+backend/venv/
+
+# Local database
+*.db
+backend/risk_intel.db
+
+# Next.js / Node
+node_modules/
+.next/
+frontend/node_modules/
+frontend/.next/
+
+# Editor / backup files
+*.save
+.DS_Store
