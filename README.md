@@ -71,22 +71,6 @@ The seeded demo data includes:
 
 ---
 
-## Screenshots
-
-### Main Dashboard
-
-![Main dashboard](docs/screenshots/dashboard.png)
-
-### Request Detail Panel
-
-![Request detail panel](docs/screenshots/incident-detail.png)
-
-### Audit Trail
-
-![Audit trail](docs/screenshots/audit-trail.png)
-
----
-
 ## Recommended Demo Flow
 
 1. Start the backend and frontend.
