@@ -1,81 +1,129 @@
-# Product Brief: AI Customer Trust & Enterprise Assurance Workflow
+# Product Brief — AI Customer Trust & Enterprise Assurance Workflow
 
-## One-line summary
+## Overview
 
-A human-in-the-loop GRC workflow that helps teams triage customer trust requests, map approved evidence, route escalations, front-load region-specific customer needs, and control customer-facing security and compliance claims.
+The AI Customer Trust & Enterprise Assurance Workflow is a full-stack proof of concept designed to help GRC and Customer Trust teams manage enterprise security and compliance requests more efficiently.
+
+The application supports customer trust intake, regional routing, evidence mapping, stakeholder review, SLA tracking, and approved customer-facing response workflows.
 
 ## Problem
 
-Customer trust teams support security questionnaires, Trust Center updates, public policy language, customer calls, regional diligence requests, and high-priority deal support. Many requests are repetitive, but the risk of inaccurate external claims is high.
+Customer Trust teams often face repeated pressure from Sales, Customer Success, and enterprise customers to respond quickly to security and compliance questions.
 
-The work also varies by region. Japan/APAC customers may ask more about localized documentation, data residency, cross-border transfers, and dedicated storage. EU customers may focus on GDPR, DPAs, SCCs, subprocessors, retention, deletion, and AI/data-use boundaries. US financial services customers may focus on SOC 2, CAIQ, encryption, access control, vulnerability management, and incident response evidence.
+Common pain points include:
+- High-volume security questionnaires
+- Repetitive customer diligence requests
+- Inconsistent answers across GTM and Customer Success teams
+- Regional differences in customer concerns
+- Limited capacity for manual review
+- Need to keep public and customer-facing claims accurate
+- Unclear routing between GRC, Security, Privacy, Legal, Product, Field Security, and GTM
+- Difficulty proving that external claims are supported by internal controls and approved evidence
 
-Teams need a scalable workflow that uses historical request patterns to anticipate likely needs, prepare the right evidence paths, and route sensitive claims to Security, Legal, Privacy, Product, Field Security, GTM, Customer Success, or regional teams before deal momentum slows down. Product-specific commitments still route to Product when needed, but the main workflow stays focused on customer trust and enterprise assurance.
+## Solution
 
-## Target users
+This prototype uses an AI-assisted workflow to help teams intake, classify, route, and respond to customer trust requests.
 
-- GRC and Customer Trust teams
-- Field Security teams
-- Product GRC-adjacent stakeholders
-- Legal and Privacy partners
-- Security teams
-- GTM, Sales, and Customer Success teams
-- Regional customer-facing teams
+The system helps users:
+- Classify customer trust requests by severity, topic, region, and review need
+- Route requests based on customer region and stakeholder requirements
+- Recommend whether the request can be answered directly or needs review
+- Map responses to approved evidence sources
+- Track SLA status and review progress
+- Identify unsupported or risky external claims
+- Maintain an audit trail of routing and review decisions
 
-## Core workflow
+## Core Features
 
-1. Intake a customer trust or enterprise assurance request.
-2. Identify customer region and segment.
-3. Compare request context against regional request patterns and playbooks.
-4. Classify the request type and priority.
-5. Check whether approved answer-bank content or evidence paths exist.
-6. Identify unsupported claims or missing context.
-7. Recommend a review path.
-8. Generate a stakeholder review matrix showing required, conditional, and informational reviewers.
-9. Document analyst notes and stakeholder decisions.
-10. Track lifecycle through triage, escalation, and closure.
-11. Preserve audit-ready history.
+### Customer Trust Intake
 
-## Regional routing examples
+The dashboard supports enterprise security and compliance request tracking, including:
+- Security questionnaires
+- Customer diligence requests
+- Trust Center support
+- Evidence requests
+- Customer-facing security and privacy questions
+- GTM / Customer Success support requests
 
-| Region / segment | Likely front-loaded needs | Recommended routing |
-| --- | --- | --- |
-| Japan / APAC | localized security docs, data residency, cross-border transfers, subprocessors, dedicated storage | Security, Privacy, Product, APAC GTM |
-| EU / EEA | DPA, SCCs, GDPR, subprocessors, retention, deletion, AI/data-use boundaries | Legal, Privacy, Product, Security |
-| US financial services | SOC 2, CAIQ, encryption, access controls, vulnerability management, incident response, dedicated storage | Field Security, GRC, Security, Privacy, Customer Success |
-| Global | answer-bank responses, SOC 2 / ISO evidence paths, Trust Center artifacts, claim substantiation | GRC / Customer Trust triage |
+### Regional Routing Intelligence
 
-## Human-in-the-loop principle
+The workflow supports region-specific routing based on expected customer concerns.
 
-The system does not approve claims, issue legal advice, or send final customer-facing responses. It helps human reviewers organize requests, identify evidence, recognize regional patterns, and route sensitive issues to the right stakeholders.
+Examples:
+- Japan / APAC: data residency, subprocessors, cross-border transfers, localized documentation, dedicated storage
+- EU / EEA: DPA, SCCs, GDPR-aligned privacy questions, retention, deletion, subprocessors, AI/data-use boundaries
+- US Financial Services: SOC 2 Type 2, CAIQ, encryption, access control, audit evidence, dedicated control explanations
+- Global: general security posture, Trust Center content, privacy documentation, compliance certifications
 
-## Stakeholder review matrix
+### Stakeholder Review Matrix
 
-Each request generates a review matrix that makes escalation judgment explicit. The matrix identifies whether each stakeholder is required, conditional, or informational; explains why the stakeholder is involved; and gives the analyst a suggested next step before final customer-facing language is approved.
+The system recommends stakeholder involvement based on the request type and risk.
 
-Example stakeholders include GRC / Customer Trust, Field Security, Security, Privacy, Legal, Product, Regional GTM / Local Team, and GTM / Customer Success. This mirrors the practical operating model behind enterprise trust work: not every request needs every reviewer, but unsupported claims, privacy language, regional commitments, product capability claims, and sensitive architecture questions should route to the right owner before being sent externally.
+Stakeholders may include:
+- GRC / Customer Trust
+- Field Security
+- Security
+- Privacy
+- Legal
+- Product
+- Regional GTM / Local Team
+- Customer Success
 
-## Demonstrated capabilities
+The matrix helps distinguish:
+- What can be answered directly from approved content
+- What requires stakeholder review
+- What should not be claimed externally without additional evidence
 
-- Customer trust intake and triage
-- Regional customer request routing
-- Stakeholder review matrix and escalation judgment
-- Security questionnaire support
-- CAIQ and Trust Center artifact management
-- Evidence mapping to SOC 2, ISO 27001, policies, and internal controls
-- Unsupported external claim review
-- Public privacy/security language review
-- SLA-style status tracking
-- Audit trails
+### Evidence Mapping
 
-## Near-term roadmap
+Requests can be mapped to approved evidence sources such as:
+- SOC 2 Type 2
+- ISO 27001
+- CAIQ
+- Trust Center content
+- Privacy policy language
+- Security documentation
+- Approved response narratives
+- Internal controls and process documentation
 
-- Add a formal answer-bank table
-- Add historical request CSV import and pattern analysis
-- Add evidence owners and expiration dates
-- Add SLA timers and overdue indicators
-- Add Product/Security/Legal/Privacy approval states
-- Add Trust Center content versioning
-- Add CSV import for security questionnaires
-- Add regional playbook administration
-- Add authentication and role-based access
+### Unsupported-Claim Detection
+
+The workflow highlights customer-facing claims that may not be supported by approved evidence.
+
+This helps prevent teams from overstating security, privacy, compliance, data handling, or product capabilities.
+
+### GTM and Customer Success Enablement
+
+The workflow supports reusable answer-bank content so GTM and Customer Success teams can respond quickly to common questions while routing sensitive questions to the right reviewers.
+
+## Why This Matters
+
+Customer Trust teams need to move fast without weakening control over external security and compliance claims.
+
+This prototype demonstrates how AI-assisted workflows can:
+- Reduce manual review burden
+- Improve questionnaire turnaround time
+- Standardize customer-facing narratives
+- Route sensitive requests to the right stakeholders
+- Improve consistency across regions
+- Preserve human judgment
+- Keep external claims tied to evidence
+
+## Intended Users
+
+- GRC teams
+- Customer Trust teams
+- Field Security
+- Privacy
+- Legal
+- Product
+- Sales / GTM
+- Customer Success
+- Security Compliance teams
+
+## Demo Positioning
+
+This project is intended as a role-specific proof of concept for product and customer trust work. It combines practical GRC/customer assurance experience with AI-assisted workflow design.
+
+It is not intended to be a production system. It is a focused demo showing how enterprise customer trust operations can become more scalable, consistent, and evidence-backed.
+
