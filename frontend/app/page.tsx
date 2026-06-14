@@ -87,7 +87,7 @@ export default function Home() {
   }, [selectedRequest])
 
   const fetchRequests = async () => {
-    const res = await axios.get(`${API_BASE}/incidents`)
+    const res = await axios.get(`${API_BASE}/customer-requests`)
     setRequests(res.data)
 
     if (selectedRequest) {
@@ -100,7 +100,7 @@ export default function Home() {
 
   const fetchAuditEvents = async (requestId: number) => {
     try {
-      const res = await axios.get(`${API_BASE}/incidents/${requestId}/audit`)
+      const res = await axios.get(`${API_BASE}/customer-requests/${requestId}/audit`)
       setAuditEvents(res.data)
     } catch {
       setAuditEvents([])
@@ -133,7 +133,7 @@ export default function Home() {
     status: string,
     analystNotes?: string
   ) => {
-    await axios.patch(`${API_BASE}/incidents/${id}`, {
+    await axios.patch(`${API_BASE}/customer-requests/${id}`, {
       status,
       analyst_notes: analystNotes,
     })
@@ -150,7 +150,7 @@ export default function Home() {
   }
 
   const escalate = async (id: number) => {
-    await axios.post(`${API_BASE}/incidents/${id}/escalate`)
+    await axios.post(`${API_BASE}/customer-requests/${id}/escalate`)
     await fetchRequests()
   }
 

@@ -311,12 +311,12 @@ def ingest_customer_request(
     return incident
 
 
-@app.get("/incidents", response_model=list[Incident])
+@app.get("/customer-requests", response_model=list[Incident])
 def get_incidents(session: Session = Depends(get_session)):
     return list_incidents(session)
 
 
-@app.get("/incidents/{incident_id}", response_model=Incident)
+@app.get("/customer-requests/{incident_id}", response_model=Incident)
 def get_incident(incident_id: int, session: Session = Depends(get_session)):
     incident = session.get(Incident, incident_id)
 
@@ -326,7 +326,7 @@ def get_incident(incident_id: int, session: Session = Depends(get_session)):
     return incident
 
 
-@app.get("/incidents/{incident_id}/review-matrix")
+@app.get("/customer-requests/{incident_id}/review-matrix")
 def get_incident_review_matrix(
     incident_id: int,
     session: Session = Depends(get_session),
@@ -351,7 +351,7 @@ def get_incident_review_matrix(
     return {"matrix": json.loads(matrix_json)}
 
 
-@app.patch("/incidents/{incident_id}", response_model=Incident)
+@app.patch("/customer-requests/{incident_id}", response_model=Incident)
 def patch_incident(
     incident_id: int,
     payload: IncidentUpdate,
@@ -390,7 +390,7 @@ def patch_incident(
     return incident
 
 
-@app.post("/incidents/{incident_id}/escalate")
+@app.post("/customer-requests/{incident_id}/escalate")
 def escalate_incident(
     incident_id: int,
     session: Session = Depends(get_session),
@@ -453,7 +453,7 @@ def get_audit_events(session: Session = Depends(get_session)):
     return list_audit_events(session)
 
 
-@app.get("/incidents/{incident_id}/audit", response_model=list[AuditLog])
+@app.get("/customer-requests/{incident_id}/audit", response_model=list[AuditLog])
 def get_incident_audit_events(
     incident_id: int,
     session: Session = Depends(get_session),
