@@ -262,23 +262,3 @@ This project retains optional external-signal ingestion modules from an earlier 
 For example, security, privacy, compliance, and GRC professionals often discuss recurring issues across public communities and industry channels. These signals can help Customer Trust teams identify common diligence themes, regional concerns, control questions, and new areas where reusable Trust Center content or approved response language may be needed.
 
 These modules are not required to run the demo. They are included as future extension points for enriching customer trust operations with external trend awareness.
-
----
-
-## Screenshots
-
-### Dashboard Overview
-
-![Dashboard Overview](/Users/calvintsai/Desktop/Screenshots/Overview.png)
-
-### Customer Trust Request Detail
-
-![Customer Trust Request Detail](/Users/calvintsai/Desktop/Screenshots/SOC2-Example-and-Card-Dive.png)
-
-### Stakeholder Review Matrix
-
-![Stakeholder Review Matrix](/Users/calvintsai/Desktop/Screenshots/SOC2-Example-and-Card-Dive-Continued.png) 
-
-### Regional Routing Intelligence
-
-![Regional Routing Intelligence](/Users/calvintsai/Desktop/Screenshots/Regional\ Routing.png) 
