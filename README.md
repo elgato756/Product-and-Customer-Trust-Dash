@@ -254,3 +254,11 @@ This project intentionally avoids automated approval. It helps analysts answer:
 - Should the answer bank, Trust Center, or evidence path be updated?
 
 Final customer-facing responses remain owned by human reviewers.
+
+## Optional External Signal Ingestion
+
+This project retains optional external-signal ingestion modules from an earlier risk intelligence prototype. While the main workflow is focused on customer trust request intake, regional routing, evidence mapping, SLA tracking, and stakeholder review, external sources such as professional forums, public compliance discussions, regulatory updates, and practitioner communities can provide useful context on emerging customer concerns.
+
+For example, security, privacy, compliance, and GRC professionals often discuss recurring issues across public communities and industry channels. These signals can help Customer Trust teams identify common diligence themes, regional concerns, control questions, and new areas where reusable Trust Center content or approved response language may be needed.
+
+These modules are not required to run the demo. They are included as future extension points for enriching customer trust operations with external trend awareness.
